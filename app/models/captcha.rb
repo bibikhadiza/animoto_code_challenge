@@ -15,11 +15,24 @@ attr_accessor :text, :exclude, :word_frequency
     @@all
   end
 
+  def self.find(text)
+    @@all.each do |e|
+      if e.text === text
+        return e
+      end
+    end
+
+  end
+
+  def validateWordCount(word_frequency, user_input)
+    
+  end
+
   private
 
   def generate_excluded_words
     exclude = []
-    words_array = text.downcase.gsub(/[!,.?]/,'').split.uniq
+    words_array = text.downcase.gsub(/[!,.?-]/,'').split.uniq
 
     if words_array.length == 1
       return exclude

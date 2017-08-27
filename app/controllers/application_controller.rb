@@ -1,8 +1,7 @@
-
+  require 'pry'
 
 class ApplicationController < Sinatra::Base
 
-  require 'pry'
 
   configure do
   	set :views, "app/views"
@@ -14,7 +13,15 @@ class ApplicationController < Sinatra::Base
     text_file = files.sample
     source_text = File.read(text_file).strip
     captcha = Captcha.new(source_text)
-    erb :home, locals: { captcha: captcha }
+    erb :home, locals: { text: captcha.text, exclude: captcha.exclude, word_frequency: captcha.word_frequency}
+  end
+
+  post "/" do
+    binding.pry
+    captcha = Captcha.find(params.to_s["text"])
+
+    captcha.text
+
   end
 
 

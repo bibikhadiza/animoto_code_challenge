@@ -1,5 +1,29 @@
 <div class="container">
     <input id="button" type="submit" value="Join Forum" />
  </div>
- <p hidden class="captcha-text"><%= captcha.text %></p>
-<p hidden class="captcha-exclude"><%= captcha.exclude %></p>
+
+
+<div class="captcha" hidden>
+  <h4>Wait! Before we proceed to the forum lets play a game! Please input the frequency of the words in</h4>
+  <h4>"<%= text%>"</h4>
+  <% if exclude.length > 0 %>
+    <% str = "" %>
+    <% exclude.each do |word|%>
+      <% if word == exclude.last %>
+        <% str += " " + "and" + " " + word %>
+      <% else %>
+        <% str += " "+ word + "," %>
+      <%end%>
+   <%end%>
+   <h4>but please ignore ignore the words <%= str %></h4>
+ <%end%>
+ </div>
+
+ <form method="post" action="/" hidden>
+   <input type="hidden" value='<%=text%>' name="text" />
+   <input type="hidden" value='<%=exclude%>' name="exclude" />
+   <input type="hidden" value='<%=word_frequency%>' name="word_frequency" />
+   <label for="word-count"> <input type="number" value="Number of Words" name="user_input"></label>
+   <br></br>
+   <input type="submit" value="submit">
+ </form>
