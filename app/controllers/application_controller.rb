@@ -14,8 +14,7 @@ class ApplicationController < Sinatra::Base
     text_file = files.sample
     source_text = File.read(text_file).strip
     captcha = Captcha.new(source_text)
-
-    erb :home, locals: { source_text: source_text, exclude: captcha.exclude }
+    erb :home, locals: { captcha: captcha }
   end
 
 

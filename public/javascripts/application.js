@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    append()
+  $("#button").click(function(){
+  $("#button").hide();
+  $(".captcha-text").show();
+  $(".captcha-exclude").show();
+  })
 })
-
-function append(){
-
-}
