@@ -2,7 +2,7 @@
 
 ## Challenge requirements
 1.	Devise a type of CAPTCHA for troll aliens to keep them out of forums
-2.	Write a server that does 2 things\n
+2.	Write a server that does 2 things
 	a. Respond to a client HTTP request with at least the following in the response body:
 		• A random body of text. Some sample texts are included.
 		• A list of some but not all words in that body of text (exception: texts with only one unique word should use an empty 		list)
