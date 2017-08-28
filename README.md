@@ -37,7 +37,7 @@ I have decided to build this application with Ruby and Sinatra over Ruby on Rail
 ### Features:
 1.	Consits MVC design pattern
 2.	API results are formatted and displayed
-3.	Integration of jQuery to elimenate page refresh
+3.	Integration of jQuery to eliminate page refresh
 4. 	Single point of input
 5. 	Stateless application
 
@@ -60,12 +60,13 @@ Version Control
 
 ###	Future Considerations 
 1. 	Integreate last bonus feature - When the server receives text, exclusion words, and a word count from the client, it verifies that 	   the text and exclusion words that it previously gave a client
-2. 	Add a script ./run to start the server and The server should run on localhost:8000 and serve a single path /
+2. 	I had given myself a time limit to complete this assignment and was not able to complete #3 on the Animoto Word Count Validator 	Readme Guidline. For future considerations, I would complete #3 on the guideline 
+	#3 = Add a script './run' to start the server and The server should run on localhost:8000 and serve a single path "/"
 3.	Code Deploy for rapid future releases
 		a.	Docker
 		b.	Heroku
 		c.	AWS
 4.	Write integration tests using Capybara
-5.	Refactor in React.js with Redux
-6. 	I had given myself a time limit to complete this assignment and was not able to complete #3 on the Animoto Word Count Validator 	Readme Guidline. For future considerations, I would complete #3 on the guideline  
+5.	Refactor in React.js
+
 
