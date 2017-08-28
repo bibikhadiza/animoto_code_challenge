@@ -5,8 +5,8 @@
 
 
 <div class="captcha" hidden>
-  <h4>Wait! Before we proceed to the forum lets play a game! Please input the frequency of the words in</h4>
-  <h4>"<%= text%>"</h4>
+  <p>Wait! Before we proceed to the forum lets play a game! Please input the frequency of the words in</p>
+  <p class="text">"<%= text%>"</p>
   <% if exclude.length > 0 %>
     <% str = "" %>
     <% exclude.each do |word|%>
@@ -18,7 +18,7 @@
         <% str += " "+ word + "," %>
       <%end%>
    <%end%>
-   <h4>but please ignore ignore the words <%= str %></h4>
+   <p>but please ignore ignore the words <%= str %></p>
  <%end%>
  </div>
 

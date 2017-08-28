@@ -8,16 +8,19 @@ class Captcha
     @word_frequency = word_frequency ? word_frequency : generate_word_frequency
   end
 
-
   def validateWordCount(word_frequency, user_input)
-    frequency_count = word_frequency.keys.count
-    text_count = text.split.size
+    frequency_count = nil
+    if word_frequency.keys.length == 1
+      frequency_count = word_frequency.keys.count
+    else
+      frequency_count = word_frequency.values.inject(0, :+)
+    end
+
     if frequency_count == user_input.to_i
       true
     else
       false
     end
-
   end
 
   private
@@ -46,7 +49,5 @@ class Captcha
     end
     @word_frequency ||= counts_hash
   end
-
-
 
 end

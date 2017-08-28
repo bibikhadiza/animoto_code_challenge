@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $("#button").click(function(){
-    $("#button").hide();
+    $(".container").remove();
     $(".captcha").show();
     $('form').show();
   });
@@ -30,8 +30,7 @@ function validateInput(event){
     },
     error: function(response){
       if($('#form_submit').length == 1){
-        $('#message').text("Try Again")
-        $('#message').show()
+        alert("Try again")
         $( "div#form_submit" ).attr( "id", "form_button");
       }else {
         $('.captcha_container').remove();

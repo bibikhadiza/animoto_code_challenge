@@ -55,3 +55,23 @@ input:active {
   color: #1ECD97;
   background: white;
 }
+
+.captcha {
+  margin-top: 10%;
+  position: relative;
+}
+
+.captcha_container{
+  text-align: center;
+}
+
+body {
+  background: rgba(1, 1, 4, 0.89);
+  color: rgba(255, 255, 255, 0.81);
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+}
