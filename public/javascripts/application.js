@@ -13,7 +13,6 @@ $(document).ready(function() {
 
 });
 
-
 function validateInput(event){
   var form = $('form')[0];
   var formData = new FormData(form);
@@ -25,16 +24,20 @@ function validateInput(event){
     contentType: false,
     processData: false,
     success: function(response){
-      debugger;
-      // $('captcha_container').hide();
-      // $('#message').text("Hurrah! You are not an Alien!")
-      // $('#message').show()
+      $('.captcha_container').remove();
+      $('#message').text("Hurrah! You are not an Alien!")
+      $('#message').show()
     },
     error: function(response){
-      $('#message').text("Try Again")
-      $('#message').show()
-
-      debugger;
+      if($('#form_submit').length == 1){
+        $('#message').text("Try Again")
+        $('#message').show()
+        $( "div#form_submit" ).attr( "id", "form_button");
+      }else {
+        $('.captcha_container').remove();
+        $('#message').text("Gotcha! No Aliens Allowed!")
+        $('#message').show()
+      }
     }
   })
 
