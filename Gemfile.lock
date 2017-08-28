@@ -4,6 +4,7 @@ GEM
     byebug (9.1.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
+    json (2.0.2)
     method_source (0.8.2)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -42,6 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  json
   pry
   rack-test
   require_all

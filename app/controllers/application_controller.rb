@@ -1,4 +1,5 @@
   require 'pry'
+  require 'json'
 
 class ApplicationController < Sinatra::Base
 
@@ -17,10 +18,16 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/" do
-    binding.pry
-    captcha = Captcha.find(params.to_s["text"])
+    content_type :json
+    word_frequency = eval(params["word_frequency"])
+    captcha = Captcha.new(params["text"], params["exclude"], word_frequency)
+    valid = captcha.validateWordCount(word_frequency, params["user_input"])
 
-    captcha.text
+    if valid
+      status 200
+    else
+      status 400
+    end
 
   end
 

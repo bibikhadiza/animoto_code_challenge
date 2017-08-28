@@ -5,6 +5,7 @@ gem 'require_all'
 gem 'pry'
 gem 'shotgun'
 gem 'byebug'
+gem 'json'
 
 group :development, :test do
    gem 'pry'

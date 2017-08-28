@@ -1,31 +1,23 @@
 class Captcha
 
-attr_accessor :text, :exclude, :word_frequency
+  attr_accessor :text, :exclude, :word_frequency
 
-  @@all = [];
-
-  def initialize(text)
+  def initialize(text, exclude = nil, word_frequency = nil)
     @text = text
-    @exclude = generate_excluded_words
-    @word_frequency = generate_word_frequency
-    @@all << self
+    @exclude = exclude ? exclude : generate_excluded_words
+    @word_frequency = word_frequency ? word_frequency : generate_word_frequency
   end
 
-  def self.all
-    @@all
-  end
-
-  def self.find(text)
-    @@all.each do |e|
-      if e.text === text
-        return e
-      end
-    end
-
-  end
 
   def validateWordCount(word_frequency, user_input)
-    
+    frequency_count = word_frequency.keys.count
+    text_count = text.split.size
+    if frequency_count.to_i == user_input.to_i
+      true
+    else
+      false
+    end
+
   end
 
   private
