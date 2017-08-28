@@ -12,7 +12,7 @@ class Captcha
   def validateWordCount(word_frequency, user_input)
     frequency_count = word_frequency.keys.count
     text_count = text.split.size
-    if frequency_count.to_i == user_input.to_i
+    if frequency_count == user_input.to_i
       true
     else
       false

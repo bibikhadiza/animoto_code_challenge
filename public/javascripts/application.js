@@ -21,14 +21,19 @@ function validateInput(event){
   $.ajax({
     url: '/',
     method: 'POST',
-    dataType: 'json',
     data: formData,
     contentType: false,
     processData: false,
     success: function(response){
       debugger;
+      // $('captcha_container').hide();
+      // $('#message').text("Hurrah! You are not an Alien!")
+      // $('#message').show()
     },
     error: function(response){
+      $('#message').text("Try Again")
+      $('#message').show()
+
       debugger;
     }
   })

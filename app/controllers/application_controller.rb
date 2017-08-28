@@ -23,15 +23,14 @@ class ApplicationController < Sinatra::Base
     captcha = Captcha.new(params["text"], params["exclude"], word_frequency)
     valid = captcha.validateWordCount(word_frequency, params["user_input"])
 
-    if valid
+    if valid == true
       status 200
+      params.to_json
     else
       status 400
+      params.to_json
     end
-
   end
-
-
 
 
 end

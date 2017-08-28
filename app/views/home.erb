@@ -1,3 +1,4 @@
+<div class="captcha_container">
 <div class="container">
     <input id="button" type="submit" value="Join Forum" />
  </div>
@@ -9,8 +10,10 @@
   <% if exclude.length > 0 %>
     <% str = "" %>
     <% exclude.each do |word|%>
-      <% if word == exclude.last %>
+      <% if word == exclude.last && exclude.length != 1%>
         <% str += " " + "and" + " " + word %>
+      <%elsif exclude.length == 1%>
+        <% str += " " + word%>
       <% else %>
         <% str += " "+ word + "," %>
       <%end%>
@@ -27,3 +30,6 @@
    <br></br>
    <input type="submit" value="submit">
  </form>
+ </div>
+
+ <h5 id="message" hidden></h5>
