@@ -17,7 +17,7 @@ describe ApplicationController do
        :exclude => ["quick", "brown"].to_s,
        :user_input => "7",
        :word_frequency => @captcha.word_frequency.to_s
-     }
+      }
 
       it 'responsed with 200 status if user input does not equal word count' do
         post '/', params

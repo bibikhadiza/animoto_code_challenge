@@ -1,8 +1,4 @@
-  require 'pry'
-  require 'json'
-
 class ApplicationController < Sinatra::Base
-
 
   configure do
   	set :views, "app/views"
@@ -31,6 +27,5 @@ class ApplicationController < Sinatra::Base
       params.to_json
     end
   end
-
 
 end

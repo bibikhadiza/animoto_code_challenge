@@ -1,35 +1,36 @@
 <div class="captcha_container">
-<div class="container">
+  <div class="container">
     <input id="button" type="submit" value="Join Forum" />
- </div>
+  </div>
 
+  <div class="captcha" hidden>
+    <p>Wait! Before we proceed to the forum lets play a game! Please input the frequency of the words in</p>
+    <p class="text">"<%= text%>"</p>
 
-<div class="captcha" hidden>
-  <p>Wait! Before we proceed to the forum lets play a game! Please input the frequency of the words in</p>
-  <p class="text">"<%= text%>"</p>
-  <% if exclude.length > 0 %>
-    <% str = "" %>
-    <% exclude.each do |word|%>
-      <% if word == exclude.last && exclude.length != 1%>
-        <% str += " " + "and" + " " + word %>
-      <%elsif exclude.length == 1%>
-        <% str += " " + word%>
-      <% else %>
-        <% str += " "+ word + "," %>
+    <% if exclude.length > 0 %>
+      <% str = "" %>
+      <% exclude.each do |word|%>
+        <% if word == exclude.last && exclude.length != 1%>
+          <% str += " " + "and" + " " + word %>
+        <%elsif exclude.length == 1%>
+          <% str += " " + word%>
+        <% else %>
+          <% str += " "+ word + "," %>
+        <%end%>
       <%end%>
-   <%end%>
-   <p>but please ignore ignore the words <%= str %></p>
- <%end%>
- </div>
+      <p>but please ignore ignore the words <%= str %></p>
+    <%end%>
+  </div>
 
- <form method="post" action="/" hidden>
-   <input type="hidden" value='<%=text%>' name="text" />
-   <input type="hidden" value='<%=exclude%>' name="exclude" />
-   <input type="hidden" value='<%=word_frequency%>' name="word_frequency" />
-   <label for="word-count"> <input type="number" value="Number of Words" name="user_input"></label>
-   <br></br>
-   <div id="form_submit"><input type="submit" value="submit"></div>
- </form>
- </div>
+  <form method="post" action="/" hidden>
+    <input type="hidden" value='<%=text%>' name="text" />
+    <input type="hidden" value='<%=exclude%>' name="exclude" />
+    <input type="hidden" value='<%=word_frequency%>' name="word_frequency" />
+    <label for="word-count"> <input type="number" value="Number of Words" name="user_input"></label>
+    <br></br>
+    <div id="form_submit"><input type="submit" value="submit"></div>
+  </form>
 
- <h5 id="message" hidden></h5>
+</div>
+
+<h5 id="message" hidden></h5>

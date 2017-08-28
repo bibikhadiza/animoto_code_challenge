@@ -8,15 +8,14 @@ $(document).ready(function() {
 
   $("form").submit(function(event){
     event.preventDefault()
-    validateInput(event)
-  })
+    validateInput()
+  });
 
 });
 
-function validateInput(event){
+function validateInput(){
   var form = $('form')[0];
   var formData = new FormData(form);
-
   $.ajax({
     url: '/',
     method: 'POST',
@@ -39,5 +38,4 @@ function validateInput(event){
       }
     }
   })
-
 }

@@ -41,7 +41,7 @@ class Captcha
   end
 
   def generate_word_frequency
-     words_array = text.downcase.gsub(/[!,.?]/,'').split.delete_if {|word| exclude.include?(word) }
+    words_array = text.downcase.gsub(/[!,.?]/,'').split.delete_if {|word| exclude.include?(word) }
     counts_hash = {}
 
     words_array.each do |word|

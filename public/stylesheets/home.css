@@ -30,14 +30,15 @@ input {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+
 input:hover {
   color: white;
   background: #1ECD97;
 }
+
 input:active {
   letter-spacing: 2px;
 }
-
 
 .onclic {
   width: 40px;
@@ -46,11 +47,13 @@ input:active {
   font-size: 0;
   border-left-color: #1ECD97;
   -webkit-animation: rotating 2s 0.25s linear infinite;
-          animation: rotating 2s 0.25s linear infinite;
+  animation: rotating 2s 0.25s linear infinite;
 }
+
 .onclic:after {
   content: "";
 }
+
 .onclic:hover {
   color: #1ECD97;
   background: white;
