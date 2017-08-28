@@ -2,7 +2,6 @@ ENV["SINATRA_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
 
 require_relative '../config/environment'
-
 require 'rack/test'
 
 RSpec.configure do |config|

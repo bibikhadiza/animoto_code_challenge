@@ -6,6 +6,7 @@ gem 'pry'
 gem 'shotgun'
 gem 'byebug'
 gem 'json'
+gem 'capybara'
 
 group :development, :test do
    gem 'pry'
