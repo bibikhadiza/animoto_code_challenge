@@ -68,5 +68,5 @@ Version Control
 		c.	AWS
 4.	Write integration tests using Capybara
 5.	Refactor in React.js with Redux
-6. 	I had given myself a time limit to complete this assignment and was not able to complete #3 on the Animoto Word Count Validator 	Readme Guidline. For future considerations, I would complete #3 on the guideline.  
+6. 	I had given myself a time limit to complete this assignment and was not able to complete #3 on the Animoto Word Count Validator 	Readme Guidline. For future considerations, I would complete #3 on the guideline  
 
