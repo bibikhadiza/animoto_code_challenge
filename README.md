@@ -3,17 +3,16 @@
 ## Challenge requirements
 1.	Devise a type of CAPTCHA for troll aliens to keep them out of forums
 2.	Write a server that does 2 things
-	a. Respond to a client HTTP request with at least the following in the response body:
-		• A random body of text. Some sample texts are included.
-		• A list of some but not all words in that body of text (exception: texts with only one unique word should use an empty 		list)
-		
-	b. Receive a client HTTP request with at least the following in the request
-		• A body of text
-		• A list of some but not all words in that body of text (exception: texts with only one unique word should have an empty 		list)
-		• A count of the frequency of every word in the body of text excluding words from the list 
-	   and respond with:
-	   	• If the word frequency count is correct, then 200 OK
-		• If the word frequency count is incorrect or the request is otherwise invalid, then 400 Bad Request
+	a. Respond to a client HTTP request with at least the following in the response body: <br>
+		• A random body of text. Some sample texts are included. <br>
+		• A list of some but not all words in that body of text (exception: texts with only one unique word should use an empty 		list)<br>	
+	b. Receive a client HTTP request with at least the following in the request<br>
+		• A body of text<br>
+		• A list of some but not all words in that body of text (exception: texts with only one unique word should have an empty 		list)<br>
+		• A count of the frequency of every word in the body of text excluding words from the list<br>
+	  	 and respond with:<br>
+	   	- If the word frequency count is correct, then 200 OK<br>
+		- If the word frequency count is incorrect or the request is otherwise invalid, then 400 Bad Request<br>
 		
 3.	Write tests to assert the correctness of source code
 4.	Include Readme
